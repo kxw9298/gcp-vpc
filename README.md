@@ -1,5 +1,15 @@
 # gcp-vpc
 
+1. Create 1st firewall rule to allow SSH access .
+
+```
+gcloud compute firewall-rules create demo-vpc-allow-ssh --allow tcp:22 --network demo-vpc
+```
+2. Create 2nd firewall rule to allow access (tcp,udp,icmp ports)internally within VPC
+```
+gcloud compute firewall-rules create demo-vpc-allow-internal-network --allow tcp:1-65535,udp:1-65535,icmp --source-ranges 10.0.0.0/16 --network demo-vpc
+```
+3. Launch NAT instance in Public subnet with tag as “nat-instance”.
 ```
 gcloud compute instances create nat-gateway --network demo-vpc --can-ip-forward \
     --zone us-central1-a \
@@ -8,7 +18,7 @@ gcloud compute instances create nat-gateway --network demo-vpc --can-ip-forward 
     --image-project debian-cloud \
     --tags nat-instance
 ```
-
+4. Launch 2 instances in private subnet with tag as “Private-instances”
 ```
 gcloud compute instances create example-instance --network demo-vpc --no-address \
     --zone us-east1-b \
@@ -17,7 +27,7 @@ gcloud compute instances create example-instance --network demo-vpc --no-address
     --image-project debian-cloud \
     --tags private-instance
 ```
-
+5. Create a route to allow all instances running in private subnet to access internet.
 ```
 gcloud compute routes create demo-vpc-no-ip-internet-route --network demo-vpc \
     --destination-range 0.0.0.0/0 \
