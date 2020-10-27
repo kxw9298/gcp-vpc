@@ -1,5 +1,28 @@
 # gcp-vpc
 
+## create vpc
+
+```
+gcloud compute networks create demo-vpc \
+    --subnet-mode=custom \
+    --bgp-routing-mode=regional \
+    --mtu=1460
+```
+
+## add subnet
+```
+gcloud compute networks subnets create demo-vpc-public-subnet-us-central \
+    --network=demo-vpc \
+    --range=10.0.1.0/24 \
+    --region=us-central1
+```
+```
+gcloud compute networks subnets create demo-vpc-private-subnet-us-east \
+    --network=demo-vpc \
+    --range=10.0.2.0/24 \
+    --region=us-east1
+```
+
 1. Create 1st firewall rule to allow SSH access .
 
 ```
