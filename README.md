@@ -58,6 +58,10 @@ gcloud compute routes create demo-vpc-no-ip-internet-route --network demo-vpc \
     --next-hop-instance-zone us-east1-b \
     --tags private-instance --priority 800
 ```
-
+SSH to your private instances and install apache2 package.
 ```
+sudo apt-get update -y
+sudo apt-get install apache2 -y
 ```
+To start Apache 2 web server, enter:
+`sudo /etc/init.d/apache2 start`
