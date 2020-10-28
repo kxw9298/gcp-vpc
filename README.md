@@ -68,3 +68,5 @@ To start Apache 2 web server, enter:
 
 allow http:
 `gcloud compute firewall-rules create demo-vpc-allow-http --allow tcp:80 --network demo-vpc`
+
+refer to this [link](https://stackoverflow.com/questions/48515928/how-to-create-private-and-public-subnets-in-gcp)
