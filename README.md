@@ -74,3 +74,5 @@ allow http:
 `gcloud compute firewall-rules create demo-vpc-allow-http --allow tcp:80 --network demo-vpc`
 
 refer to this stack overflows [link](https://stackoverflow.com/questions/48515928/how-to-create-private-and-public-subnets-in-gcp)
+
+[example to deploy nodejs in gcp vm](https://medium.com/the-node-js-collection/time-to-hello-world-part2-gce-95e9df907b93)
