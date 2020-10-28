@@ -76,3 +76,5 @@ allow http:
 refer to this stack overflows [link](https://stackoverflow.com/questions/48515928/how-to-create-private-and-public-subnets-in-gcp)
 
 [example to deploy nodejs in gcp vm](https://medium.com/the-node-js-collection/time-to-hello-world-part2-gce-95e9df907b93)
+
+[How to Check Remote Ports are Reachable Using ‘nc’ Command](https://www.tecmint.com/check-remote-port-in-linux/)
