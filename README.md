@@ -43,6 +43,8 @@ gcloud compute instances create nat-gateway --network demo-vpc --can-ip-forward 
 ```
 
 note: follow this link to [create cloud nat](https://cloud.google.com/nat/docs/using-nat#creating_nat)
+add a nat in the region where private subnet resides
+
 4. Launch 2 instances in private subnet with tag as “Private-instances”
 ```
 gcloud compute instances create example-instance --network demo-vpc --no-address \
