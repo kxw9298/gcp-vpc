@@ -78,3 +78,4 @@ refer to this stack overflows [link](https://stackoverflow.com/questions/4851592
 [example to deploy nodejs in gcp vm](https://medium.com/the-node-js-collection/time-to-hello-world-part2-gce-95e9df907b93)
 
 [How to Check Remote Ports are Reachable Using ‘nc’ Command](https://www.tecmint.com/check-remote-port-in-linux/)
+[Deploying the Application — Google Cloud Platform (Public/Private Subnets)](https://medium.com/@manoj.bhagwat60/deploying-the-application-google-cloud-platform-public-private-subnets-9b77986ebd51)
