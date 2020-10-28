@@ -41,6 +41,8 @@ gcloud compute instances create nat-gateway --network demo-vpc --can-ip-forward 
     --image-project debian-cloud \
     --tags nat-instance
 ```
+
+note: follow this link to [create cloud nat](https://cloud.google.com/nat/docs/using-nat#creating_nat)
 4. Launch 2 instances in private subnet with tag as “Private-instances”
 ```
 gcloud compute instances create example-instance --network demo-vpc --no-address \
@@ -69,4 +71,4 @@ To start Apache 2 web server, enter:
 allow http:
 `gcloud compute firewall-rules create demo-vpc-allow-http --allow tcp:80 --network demo-vpc`
 
-refer to this [link](https://stackoverflow.com/questions/48515928/how-to-create-private-and-public-subnets-in-gcp)
+refer to this stack overflows [link](https://stackoverflow.com/questions/48515928/how-to-create-private-and-public-subnets-in-gcp)
